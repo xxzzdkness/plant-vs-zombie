@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e2c1f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game {
+  width: 1000px;
+  height: 650px;
+  background: linear-gradient(#7cc85b, #4f8d3e);
+  border: 4px solid #203320;
+  position: relative;
+  overflow: hidden;
+}
+
+#topBar {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: rgba(0,0,0,0.35);
+}
+
+#energyBox {
+  width: 120px;
+  height: 60px;
+  background: #ffd84d;
+  color: #3d2a00;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card {
+  width: 100px;
+  height: 65px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card.selected {
+  outline: 4px solid gold;
+}
+
+#info {
+  margin-left: auto;
+  text-align: right;
+}
+
+#board {
+  position: absolute;
+  left: 80px;
+  top: 120px;
+  width: 810px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(9, 90px);
+  grid-template-rows: repeat(5, 90px);
+}
+
+.cell {
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.plant,
+.enemy,
+.bullet,
+.sun {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plant {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  left: 13px;
+  top: 13px;
+  font-size: 32px;
+}
+
+.producer {
+  background: #ffe066;
+}
+
+.shooter {
+  background: #6eff7c;
+}
+
+.wall {
+  background: #b57b3f;
+}
+
+.enemy {
+  width: 58px;
+  height: 76px;
+  background: #6d6d6d;
+  border-radius: 12px;
+  font-size: 30px;
+}
+
+.bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #b5ff6a;
+}
+
+.sun {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: gold;
+  color: #3b2900;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#message {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: rgba(0,0,0,0.75);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 42px;
+}
