@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garden Defense</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game">
+    <section id="topBar">
+      <div id="energyBox">☀ 100</div>
+
+      <button class="card" data-type="producer">
+        產能花
+        <small>花費 50</small>
+      </button>
+
+      <button class="card" data-type="shooter">
+        射手花
+        <small>花費 100</small>
+      </button>
+
+      <button class="card" data-type="wall">
+        堅果牆
+        <small>花費 75</small>
+      </button>
+
+      <div id="info">
+        擊敗：<span id="kills">0</span> / 25<br />
+        點卡片，再點草地放置
+      </div>
+    </section>
+
+    <section id="board" aria-label="game board"></section>
+
+    <section id="message">
+      <div id="messageText"></div>
+      <button onclick="location.reload()">重新開始</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
